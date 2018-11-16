@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-todo',
-  templateUrl: 'todo.component.html'
+  templateUrl: 'todo.component.html',
 })
+export class TodoPage implements OnInit {
+  constructor() {}
 
-export class TodoComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit() { }
+  ngOnInit() {}
 }

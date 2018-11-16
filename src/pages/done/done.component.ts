@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-done',
   templateUrl: 'done.component.html',
 })
-export class DoneComponent implements OnInit {
+export class DonePage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
