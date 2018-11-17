@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TasksService } from '../../services/tasks.service';
+import { List } from '../../models';
 
 @Component({
   selector: 'app-todo',
   templateUrl: 'todo.component.html',
 })
-export class TodoPage implements OnInit {
+export class TodoPage {
   constructor(public tasks: TasksService) {}
 
-  ngOnInit() {}
+  listSelected(list: List) {
+    console.log(list);
+  }
 }
