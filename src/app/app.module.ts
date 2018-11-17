@@ -9,12 +9,18 @@ import { DonePage } from '../pages/done/done.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { TasksService } from '../services/tasks.service';
 
 @NgModule({
   declarations: [MyApp, TabsPage, TodoPage, DonePage],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, TabsPage, TodoPage, DonePage],
-  providers: [StatusBar, SplashScreen, { provide: ErrorHandler, useClass: IonicErrorHandler }],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    TasksService,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+  ],
 })
 export class AppModule {}
