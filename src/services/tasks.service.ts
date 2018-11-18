@@ -18,6 +18,11 @@ export class TasksService {
     this.saveToStorage();
   }
 
+  removeList(id: number) {
+    this.lists = this.lists.filter(l => id !== l.id);
+    this.saveToStorage();
+  }
+
   saveToStorage() {
     const jsonLists = JSON.stringify(this.lists);
     localStorage.setItem('lists', jsonLists);

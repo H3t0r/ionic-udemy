@@ -48,4 +48,8 @@ export class TodoPage {
 
     newListAlert.present();
   }
+
+  removeList(id: number) {
+    this.tasks.removeList(id);
+  }
 }
