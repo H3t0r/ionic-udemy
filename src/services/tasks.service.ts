@@ -6,10 +6,20 @@ export class TasksService {
   lists: List[] = [];
 
   constructor() {
-    const list_1 = new List('Infinity stones.');
-    const list_2 = new List('Heroes to defeat.');
+    const savedLists = localStorage.getItem('lists');
 
-    this.lists.push(list_1, list_2);
-    console.log(this.lists);
+    if (savedLists) {
+      this.lists = JSON.parse(savedLists);
+    }
+  }
+
+  addList(newLlist: List) {
+    this.lists.push(newLlist);
+    this.saveToStorage();
+  }
+
+  saveToStorage() {
+    const jsonLists = JSON.stringify(this.lists);
+    localStorage.setItem('lists', jsonLists);
   }
 }

@@ -16,7 +16,7 @@ export class TodoPage {
   ) {}
 
   listSelected(list: List) {
-    console.log(list);
+    this.ionNav.push(NewListPage, { listName: list.title, list });
   }
 
   addNewList() {
