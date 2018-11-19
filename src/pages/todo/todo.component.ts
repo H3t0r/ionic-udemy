@@ -15,10 +15,6 @@ export class TodoPage {
     private ionAlert: AlertController
   ) {}
 
-  listSelected(list: List) {
-    this.ionNav.push(NewListPage, { listName: list.title, list });
-  }
-
   addNewList() {
     const newListAlert = this.ionAlert.create({
       title: 'Create new list',
@@ -47,9 +43,5 @@ export class TodoPage {
     });
 
     newListAlert.present();
-  }
-
-  removeList(id: number) {
-    this.tasks.removeList(id);
   }
 }
