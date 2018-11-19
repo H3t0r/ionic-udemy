@@ -1,10 +1,15 @@
 <ion-list>
-  <ion-item-sliding *ngFor="let list of (tasks.lists | filterListsBy: isFinished)">
+  <ion-item-sliding *ngFor="let list of (tasks.lists | filterListsBy: isFinished)" #slidingItem>
     <button ion-item (click)="listSelected(list)">
       {{ list.title }}
       <ion-badge item-end>{{ list.items.length }} items</ion-badge>
     </button>
     <ion-item-options side="left">
+      <button ion-button icon-only (click)="renameList(list, slidingItem)">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-item-options>
+    <ion-item-options side="rigth">
       <button ion-button icon-only (click)="removeList(list.id)">
         <ion-icon name="close"></ion-icon>
       </button>
