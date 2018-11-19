@@ -1,6 +1,6 @@
 <ion-list>
   <ion-item-sliding *ngFor="let list of (tasks.lists | filterListsBy: isFinished)" #slidingItem>
-    <button ion-item (click)="listSelected(list)">
+    <button ion-item detail-none (click)="listSelected(list)">
       {{ list.title }}
       <ion-badge item-end>{{ list.items.length }} items</ion-badge>
     </button>
