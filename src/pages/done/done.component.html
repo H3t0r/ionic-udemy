@@ -5,7 +5,11 @@
 <ion-content>
   <img src="../../assets/imgs/completados.jpg" />
   <ion-list>
-    <button ion-item *ngFor="let list of tasks.lists" (click)="listSelected(list)">
+    <button
+      ion-item
+      *ngFor="let list of (tasks.lists | filterListsBy: true)"
+      (click)="listSelected(list)"
+    >
       {{ list.title }}
     </button>
   </ion-list>

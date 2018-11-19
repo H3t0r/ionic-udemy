@@ -12,8 +12,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TasksService } from '../services/tasks.service';
 import { NewListPage } from '../pages/new-list/new-list.component';
 
+import { FilterListsByPipe } from '../pipes/filter-lists-by/filter-lists-by';
+
 @NgModule({
-  declarations: [MyApp, TabsPage, TodoPage, DonePage, NewListPage],
+  declarations: [MyApp, TabsPage, TodoPage, DonePage, NewListPage, FilterListsByPipe],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, TabsPage, TodoPage, DonePage, NewListPage],
